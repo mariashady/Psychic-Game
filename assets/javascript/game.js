@@ -33,11 +33,22 @@ document.onkeyup = function (event) {
     let keyPressed = event.key
     guessSoFar.push(keyPressed)
     console.log(guessSoFar)
-
+    guessLeft--;
     if(keyPressed === computerLetter){
         wins++;
     }
-
+    // else{
+    //     losses++;
+    // }
+    if(guessLeft===0){
+        losses++;
+    }
+    if(guessLeft===0){
+        losses++;
+        location.reload();
+        
+    }
+    
 
     //this is where checkGame status is going to be called
     updateDOM()
