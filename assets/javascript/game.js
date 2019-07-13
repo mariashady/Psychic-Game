@@ -25,9 +25,6 @@ function updateDOM() {
     document.getElementById("sofar").innerHTML= guessSoFar;
     
 }
-
-
-// keyUp event for userGuess
 document.onkeyup = function (event) {
     console.log(event)
     let keyPressed = event.key
@@ -36,28 +33,22 @@ document.onkeyup = function (event) {
     guessLeft--;
     if(keyPressed === computerLetter){
         wins++;
+        location.reload();
     }
-    // else{
-    //     losses++;
-    // }
+
     if(guessLeft===0){
         losses++;
     }
+
     if(guessLeft===0){
         losses++;
         location.reload();
         
     }
-    
-
-    //this is where checkGame status is going to be called
     updateDOM()
 
 
 }
-
-
-// if statement if userGuess is correct
 
 
 
@@ -65,10 +56,6 @@ document.onkeyup = function (event) {
 // else/if statement if userGuess is incorrect
 
 //reset game 
-
-//inner html of wins, losses, guesses left in updateDOM function
-
-//write function to check the game status - if keypressed = computerLetter
 
 //if statesment for guesses left 
 
